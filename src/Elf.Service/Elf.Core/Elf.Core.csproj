@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <RootNamespace>Elf.Core</RootNamespace>
+    <SkipValidatePackageReferences>true</SkipValidatePackageReferences>
+    <AssemblyName>Elf.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\**\*.xml" />
+    <EmbeddedResource Include="Emailing\EmailTemplates\*.html" />
+    <Content Include="Localization\**\*.xml" CopyToPublishDirectory="Always" />
+    <Content Include="Emailing\EmailTemplates\*.html" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Authentication\MyAXA\Models\**" />
+    <EmbeddedResource Remove="Authentication\MyAXA\Models\**" />
+    <None Remove="Authentication\MyAXA\Models\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.1.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
+    <PackageReference Include="RavenDB.Client" Version="3.5.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Elf.Common\Elf.Common.csproj" />
+  </ItemGroup>
+
+</Project>

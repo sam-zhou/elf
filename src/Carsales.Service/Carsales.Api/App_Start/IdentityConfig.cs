@@ -1,8 +1,0 @@
-﻿namespace Carsales.Api
-{
-    
-
-    
-
-    
-}
