@@ -9,10 +9,7 @@ namespace Elf.Core.Uow
         private static readonly Object LockObject = new Object();
         public static void SetObjectContext(Func<IDocumentStore> objectContextDelegate)
         {
-            lock (LockObject)
-            {
-                _objectContextDelegate = objectContextDelegate;
-            }
+            _objectContextDelegate = objectContextDelegate;
         }
         #region IUnitOfWorkFactory Members
         public IUnitOfWork Create()

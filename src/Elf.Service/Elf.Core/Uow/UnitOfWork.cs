@@ -16,20 +16,7 @@ namespace Elf.Core.Uow
             IUnitOfWork unitOfWork = GetUnitOfWork();
             unitOfWork?.Commit();
         }
-        public static IUnitOfWork Current
-        {
-            get
-            {
-                IUnitOfWork unitOfWork = GetUnitOfWork();
-                if (unitOfWork == null)
-                {
-                    //_unitOfWorkFactory = IoCContainer.Resolve<IUnitOfWorkFactory>();
-                    //unitOfWork = _unitOfWorkFactory.Create();
-                    //SaveUnitOfWork(unitOfWork);
-                }
-                return unitOfWork;
-            }
-        }
+        
         private static IUnitOfWork GetUnitOfWork()
         {
             if (HttpContext.Current != null)

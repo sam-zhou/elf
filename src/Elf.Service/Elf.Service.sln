@@ -1,15 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.Api", "Elf.Api\Elf.Api.csproj", "{18963C3C-0871-4A96-AFF6-7322FBB9231A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D1AFBB82-5E33-4FA0-BE23-1D92890C30A0} = {D1AFBB82-5E33-4FA0-BE23-1D92890C30A0}
-		{AF7C909E-FD13-4432-A55A-9125436A696B} = {AF7C909E-FD13-4432-A55A-9125436A696B}
-		{0406E1A6-6DAA-4F50-9558-53411C2DDE28} = {0406E1A6-6DAA-4F50-9558-53411C2DDE28}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CD381487-D7C7-48CB-B577-DA838AF032BC}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
@@ -23,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elf.Common", "Elf.Common\El
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elf.Dto", "Elf.Dto\Elf.Dto.csproj", "{AF7C909E-FD13-4432-A55A-9125436A696B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.Api.Tests", "Elf.Api.Tests\Elf.Api.Tests.csproj", "{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.ServiceApp", "Elf.ServiceApp\Elf.ServiceApp.csproj", "{B4EE1D1F-FFE0-4F63-A8FE-384164123679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elf.ServiceApp.Tests", "Elf.ServiceApp.Tests\Elf.ServiceApp.Tests.csproj", "{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,12 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Debug Local|Any CPU.ActiveCfg = Debug|Any CPU
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Debug Local|Any CPU.Build.0 = Debug|Any CPU
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18963C3C-0871-4A96-AFF6-7322FBB9231A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0406E1A6-6DAA-4F50-9558-53411C2DDE28}.Debug Local|Any CPU.ActiveCfg = Debug|Any CPU
 		{0406E1A6-6DAA-4F50-9558-53411C2DDE28}.Debug Local|Any CPU.Build.0 = Debug|Any CPU
 		{0406E1A6-6DAA-4F50-9558-53411C2DDE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -56,18 +45,24 @@ Global
 		{AF7C909E-FD13-4432-A55A-9125436A696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF7C909E-FD13-4432-A55A-9125436A696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF7C909E-FD13-4432-A55A-9125436A696B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug Local|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug Local|Any CPU.Build.0 = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Debug Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Debug Local|Any CPU.Build.0 = Debug|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EE1D1F-FFE0-4F63-A8FE-384164123679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Debug Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Debug Local|Any CPU.Build.0 = Debug|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2E3DF5C2-8A38-4A03-86D7-8D463C917E47} = {03B32467-C218-41BA-BCF2-7EA3D68468C1}
+		{8FD8F697-0DC3-4217-ABD4-6CB9B1596579} = {03B32467-C218-41BA-BCF2-7EA3D68468C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45

@@ -18,15 +18,18 @@ namespace Elf.Core.Repositories.Abstracts
             {
                 if (_context == null)
                 {
-                    _context = GetCurrentUnitOfWork<RavenUnitOfWork>().Context;
+                    _context = UnitOfWork.Context;
                 }
                 return _context;
             }
         }
-        public TUnitOfWork GetCurrentUnitOfWork<TUnitOfWork>() where TUnitOfWork : IUnitOfWork
-        {
-            return (TUnitOfWork)UnitOfWork.Current;
+
+        protected RavenUnitOfWork UnitOfWork { get; private set; }
+
+        public RavenRepository(IUnitOfWork unitOfWork) {
+            UnitOfWork = unitOfWork as RavenUnitOfWork;
         }
+
         public IEnumerable<T> GetAll()
         {
             return Context.Query<T>();
